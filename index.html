@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Evaluador de proyectos de IA</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<main>
+  <h1>EvalIA</h1>
+  <h2>Un agente de IA califica tu proyecto .</h2>
+  <p class="lead">El agente lee el código, el README y los commits de tu repositorio público de GitHub y te da una nota de 0 a 20.</p>
+  <form id="f">
+    <label for="key">Tu clave gratuita de Google Gemini</label>
+    <input id="key" type="password" required placeholder="AIza..." autocomplete="off">
+    <small class="h">Gratis y sin tarjeta en aistudio.google.com/apikey. Se guarda solo en este navegador.</small>
+    <label for="model">Modelo</label>
+    <input id="model" type="text" required value="gemini-3.5-flash-lite">
+    <small class="h">Si da error 404, copia un modelo Flash o Flash-Lite vigente de Google AI Studio.</small>
+    <label for="url">Enlace de GitHub</label>
+    <input id="url" type="url" required value="https://github.com/ballata2003-bot/aquasense-ia">
+    <button id="go">Evaluar proyecto</button>
+  </form>
+  <div id="err" role="alert"></div>
+  <div id="out"></div>
+</main>
+<script type="module" src="js/main.js"></script>
+</body>
+</html>
